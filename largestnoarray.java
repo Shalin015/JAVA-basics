@@ -1,26 +1,20 @@
-class largestnoarray
+import java.util.*;
+import java.io.*;
+
+class ary
 {
-	public static int array(int[] a)
+	public static void main(String ar[])
 	{
-		int l=a.length;
-		int big;
-		for(int i=0; i<l; i++)
+		int[] i={5,10,21,3,15,34};
+		int a=i.length;
+		int max=i[0];
+		for(int j=0;j<a;j++)
 		{
-			for(int j=i+1; j<l; j++)
+			if(i[j]>max)
 			{
-				if(a[i]>a[j])
-				{
-					big=a[i];
-					a[i]=a[j];
-					a[j]=big;
-				}
+				max=i[j];			
 			}
 		}
-		return a[l-1];
-	}
-	public static void main (String ar[])
-	{
-		int a[]={1,2,3,4,5,7,6};
-		System.out.println(""+array(a));
+		System.out.println("max value is  : "+max);	
 	}
 }
